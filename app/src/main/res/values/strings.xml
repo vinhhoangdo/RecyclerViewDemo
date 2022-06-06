@@ -3,5 +3,7 @@
     <string name="avatar">Avatar</string>
     <string name="forward_button">Forward Button</string>
     <string name="detail">Game Detail</string>
+    <string name="gameTitle">Game title:</string>
+    <string name="gameDescription">Description:</string>
 
 </resources>

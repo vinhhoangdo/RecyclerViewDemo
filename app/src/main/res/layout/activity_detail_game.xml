@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/customBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".GameDetailActivity">
     <androidx.appcompat.widget.Toolbar
@@ -30,26 +30,52 @@
         android:id="@+id/detailImageView"
         android:layout_width="match_parent"
         android:layout_height="200sp"
-        android:background="@color/grey"
+        android:elevation="50dp"
         android:layout_margin="5dp"
         app:layout_constraintTop_toBottomOf="@+id/gameToolBar"
         app:layout_constraintStart_toStartOf="parent"/>
     <TextView
-        android:id="@+id/detailNameView"
-        android:layout_width="match_parent"
+        android:id="@+id/nameLabel"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:layout_margin="10dp"
         android:textStyle="bold|italic"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/detailImageView"/>
+        android:text="@string/gameTitle"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@+id/detailImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/detailNameView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@+id/detailImageView"
+        app:layout_constraintStart_toEndOf="@+id/nameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/descLabel"/>
+    <TextView
+        android:id="@+id/descLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold|italic"
+        android:text="@string/gameDescription"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@+id/detailNameView"/>
     <TextView
         android:id="@+id/detail_descriptionView"
-        android:layout_margin="20dp"
-        android:textSize="14sp"
+
+        android:textSize="16sp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="fill_horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/detailNameView"/>
+        app:layout_constraintTop_toBottomOf="@+id/descLabel"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
