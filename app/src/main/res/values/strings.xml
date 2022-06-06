@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">RecyclerView Demonstration</string>
-    <string name="avatar">Avatar</string>
+    <string name="game_image">Game Image</string>
     <string name="forward_button">Forward Button</string>
     <string name="detail">Game Detail</string>
     <string name="gameTitle">Game title:</string>
     <string name="gameDescription">Description:</string>
+    <string name="user_profile_button">User Profile</string>
 
 </resources>

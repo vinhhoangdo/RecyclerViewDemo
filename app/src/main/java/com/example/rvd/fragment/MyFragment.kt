@@ -62,7 +62,7 @@ class MyFragment : Fragment() {
                         swipeRefresh.isRefreshing = false
                         myAdapter.games = response.body()!!
                         recyclerView.adapter = myAdapter
-                        myAdapter.setOnItemClickListener(object : MyAdapter.onItemClickListener {
+                        myAdapter.setOnItemClickListener(object : MyAdapter.OnItemClickListener {
                             override fun onItemClick(position: Int) {
                                 val intent =
                                     Intent(activity, GameDetailActivity::class.java).apply {
@@ -79,7 +79,7 @@ class MyFragment : Fragment() {
                                         putExtra(
                                             IMAGE,
                                             myAdapter.games.assets[position].collection.banner_image_url
-                                                ?: "https://hoge.stream/loading.gif"
+                                                ?: "https://c.tenor.com/T1ehudBJ0EYAAAAd/nfts-nft.gif"
                                         )
                                         putExtra(
                                             USER_NAME,
@@ -89,7 +89,7 @@ class MyFragment : Fragment() {
                                         putExtra(
                                             USER_IMAGE,
                                             myAdapter.games.assets[position].creator.profile_img_url
-                                                ?: "https://hoge.stream/loading.gif"
+                                                ?: "https://c.tenor.com/T1ehudBJ0EYAAAAd/nfts-nft.gif"
                                         )
                                     }
                                 activity?.startActivity(intent)

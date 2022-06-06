@@ -11,11 +11,11 @@ import com.example.rvd.model.GameNFT
 
 class MyAdapter :
     RecyclerView.Adapter<ViewHolder>() {
-    private lateinit var mListener: onItemClickListener
-    interface onItemClickListener {
+    private lateinit var mListener: OnItemClickListener
+    interface OnItemClickListener {
         fun onItemClick(position: Int)
     }
-    fun setOnItemClickListener(listener: onItemClickListener) {
+    fun setOnItemClickListener(listener: OnItemClickListener) {
         mListener = listener
     }
 
@@ -37,7 +37,7 @@ class MyAdapter :
         Glide.with(viewHolder.imageView.context)
             .load(
                 games.assets[position].collection.banner_image_url
-                    ?: "https://hoge.stream/loading.gif"
+                    ?: "https://c.tenor.com/T1ehudBJ0EYAAAAd/nfts-nft.gif"
             )
             .into(viewHolder.imageView)
         viewHolder.titleView.text = games.assets[position].collection.name ?: ""
