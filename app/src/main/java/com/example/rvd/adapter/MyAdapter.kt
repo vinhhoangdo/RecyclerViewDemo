@@ -1,11 +1,9 @@
 package com.example.rvd.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.rvd.GameDetailActivity
 import com.example.rvd.R
 import com.example.rvd.model.GameNFT
 
