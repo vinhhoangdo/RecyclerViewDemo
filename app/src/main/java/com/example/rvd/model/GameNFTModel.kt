@@ -6,6 +6,7 @@ data class GameNFT(
 
 
 data class GameModel(
+    val image_url: String,
     val collection: CollectionModel,
     val creator: Creator
 )

@@ -36,7 +36,7 @@ class MyAdapter :
 
         Glide.with(viewHolder.imageView.context)
             .load(
-                games.assets[position].collection.banner_image_url
+                games.assets[position].image_url
                     ?: "https://c.tenor.com/T1ehudBJ0EYAAAAd/nfts-nft.gif"
             )
             .into(viewHolder.imageView)
